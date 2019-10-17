@@ -1,8 +1,6 @@
+#to initialize the Player class
 
 class Player
-
-require_relative "board"
-
 
 attr_accessor :name, :sign
 
@@ -11,7 +9,5 @@ attr_accessor :name, :sign
 		@sign = sign
 	end
 
+end #end of class
 
-			
-		
-end
