@@ -9,7 +9,7 @@ Remplissez vos prénoms avant de vous lancer dans une partie endiablée !
 
 >> vous devez renseigner la cases choisies sous la forme suivante :
 
-           1          2          3
+"           1          2          3
       ----------------------------------
       |          |          |          |
   a   |    a1    |    a2    |    a3    |
