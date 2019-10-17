@@ -9,3 +9,6 @@ require_relative 'lib/application'
 require_relative 'lib/show'
 
 
+launch = Application.new
+
+binding.pry
