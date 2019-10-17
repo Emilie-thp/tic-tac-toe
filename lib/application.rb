@@ -1,10 +1,12 @@
 class Application
 
-	def initialize 
-		player1 = create_player1
-		player2 = create_player2
-		partie1 = Game.new(player1, player2)
+	attr_accessor :partie
 
+	def initialize 
+		create_player1
+		create_player2
+		@partie = Game.new(@player1, @player2)
+		@partie.each_turn
 	end
 
 	def create_player1

@@ -1,6 +1,6 @@
 class Board
 
-attr_accessor :boardcase_array, :count_turn
+attr_accessor :boardcase_array, :count_turn, :cellules
 
 	def initialize 
 		@boardcase_array = Array.new
@@ -17,14 +17,14 @@ attr_accessor :boardcase_array, :count_turn
 
 		@boardcase_array << @a1 << @a2 << @a3 << @b1 << @b2 << @b3 << @c1 << @c2 << @c3
 
-		#drawing_board
+		drawing_board
 
 	end
 
 
 	def drawing_board
 
-		cellules = @boardcase_array.map{|x| x.content}
+		@cellules = @boardcase_array.map{|x| x.content}
 
     puts " "*6+" "*6 + "1" + " "*10 + "2" + " "*10 +"3"
     puts " "*6+"-"*34
@@ -44,6 +44,26 @@ attr_accessor :boardcase_array, :count_turn
   end
 
 
+  def victory?
+   	if  @cellules[0] == @cellules[1] && @cellules[1] == @cellules[2] && @cellules[0] != " " 
+   		return true
+  	elsif @cellules[3] == @cellules[4] && @cellules[4] == @cellules[5] && @cellules[3] != " "
+  		return true
+  	elsif @cellules[6] == @cellules[7] && @cellules[7] == @cellules[8] && @cellules[6] != " "
+ 			return true
+ 		elsif @cellules[0] == @cellules[3] && @cellules[3] == @cellules[6] && @cellules[0] != " "
+  		return true
+  	elsif @cellules[1] == @cellules[4] && @cellules[4] == @cellules[7] && @cellules[1] != " "
+  		return true
+  	elsif @cellules[2] == @cellules[5] && @cellules[5] == @cellules[8] && @cellules[2] != " "
+  		return true
+  	elsif @cellules[0] == @cellules[4] && @cellules[4] == @cellules[8] && @cellules[0] != " "
+  		return true
+  	elsif @cellules[2] == @cellules[4] && @cellules[4] == @cellules[6] && @cellules[2] != " "
+  		return true
+  	else return false
+  	end
+  end
 
 
 end
